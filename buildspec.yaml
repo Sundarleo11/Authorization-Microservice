@@ -17,7 +17,7 @@ phases:
     - mvn clean
     - echo Building the docker image..
     - docker build -t pms-auth-rep .
-    - docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first
+    - docker tag pms-auth-rep:first 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first
   post_build:
     commands:
     - echo Build completed on `date`
