@@ -3,6 +3,7 @@ phases:
   install:
     runtime-versions:
       docker: 18
+      java: corretto11
   pre_build:
     commands:
     - echo Logging in to Amazon ECR...
@@ -16,14 +17,14 @@ phases:
     - mvn clean
     - echo Building the docker image..
     - docker build -t pms-auth-rep .
-    - docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:v1
+    - docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first
   post_build:
     commands:
     - echo Build completed on `date`
     - echo Pushing docker image
-    - docker push 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:v1
+    - docker push 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first
     - echo Writting definition file
-    - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:v1 > imagedefinitions.json
+    - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first> imagedefinitions.json
 artifacts:
   files:
   - Authorization-Microservice/imagedefinitions.json
