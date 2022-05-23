@@ -13,19 +13,17 @@ phases:
     commands:
     - echo Build started on `date`
     - echo Building Java
-    - cd Authorization-Microservice
-    - mvn compile
-    - mvn package -DskipTests
+    - mvn clean
     - echo Building the docker image..
-    - docker build -t pms-auth-rep ..
-    - docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest
+    - docker build -t pms-auth-rep .
+    - docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:v1
   post_build:
     commands:
     - echo Build completed on `date`
     - echo Pushing docker image
-    - docker push 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest
+    - docker push 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:v1
     - echo Writting definition file
-    - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest > imagedefinitions.json
+    - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:v1 > imagedefinitions.json
 artifacts:
   files:
   - Authorization-Microservice/imagedefinitions.json
