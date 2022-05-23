@@ -1,0 +1,6 @@
+2022-05-19_13-35-27 [main] ERROR c.a.exception.GlobalExceptionHandler - Required request body is missing: public org.springframework.http.ResponseEntity<?> com.authorization.controller.JwtAuthenticationController.createAuthenticationToken(com.authorization.model.JwtRequest) throws com.authorization.exception.AuthorizationException
+2022-05-19_13-35-27 [main] ERROR c.a.exception.GlobalExceptionHandler - Required request body is missing: public org.springframework.http.ResponseEntity<?> com.authorization.controller.JwtAuthenticationController.createAuthenticationToken(com.authorization.model.JwtRequest) throws com.authorization.exception.AuthorizationException
+2022-05-19_13-35-27 [main] ERROR c.a.exception.GlobalExceptionHandler - null
+2022-05-19_13-35-27 [main] ERROR c.a.exception.GlobalExceptionHandler - null
+2022-05-19_13-36-22 [main] ERROR c.a.exception.GlobalExceptionHandler - message
+2022-05-19_13-36-22 [main] ERROR c.a.exception.GlobalExceptionHandler - message

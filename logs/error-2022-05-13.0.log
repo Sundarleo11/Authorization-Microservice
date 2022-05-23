@@ -1,0 +1,15 @@
+2022-05-13_12-49-50 [http-nio-8000-exec-2] ERROR c.a.exception.GlobalExceptionHandler - Bad credentials
+2022-05-13_14-27-11 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8000 or configure this application to listen on another port.
+

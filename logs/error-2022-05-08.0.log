@@ -1,0 +1,33 @@
+2022-05-08_07-45-10 [http-nio-8400-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_07-45-10 [http-nio-8400-exec-7] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_07-45-10 [http-nio-8400-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_07-45-10 [http-nio-8400-exec-9] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_07-45-10 [http-nio-8400-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_07-45-10 [http-nio-8400-exec-1] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_07-45-10 [http-nio-8400-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_07-45-10 [http-nio-8400-exec-3] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_09-57-08 [http-nio-8400-exec-8] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_09-57-08 [http-nio-8400-exec-9] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_09-57-08 [http-nio-8400-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_09-57-08 [http-nio-8400-exec-3] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_09-57-08 [http-nio-8400-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_09-57-08 [http-nio-8400-exec-5] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_09-57-08 [http-nio-8400-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table "USERS" not found; SQL statement:
+select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=? [42102-200]
+2022-05-08_09-57-08 [http-nio-8400-exec-3] ERROR c.c.a.e.GlobalExceptionHandler - could not prepare statement; SQL [select user0_.id as id1_0_, user0_.password as password2_0_, user0_.user_name as user_nam3_0_ from users user0_ where user0_.user_name=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+2022-05-08_18-39-20 [http-nio-8400-exec-3] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_18-39-20 [http-nio-8400-exec-5] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_18-39-20 [http-nio-8400-exec-6] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_18-39-20 [http-nio-8400-exec-7] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_18-39-20 [http-nio-8400-exec-10] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_18-39-20 [http-nio-8400-exec-9] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_18-39-20 [http-nio-8400-exec-2] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_20-38-46 [http-nio-8400-exec-1] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_20-38-46 [http-nio-8400-exec-3] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired
+2022-05-08_20-38-46 [http-nio-8400-exec-5] ERROR c.c.a.config.JwtRequestFilter - JWT Token has expired

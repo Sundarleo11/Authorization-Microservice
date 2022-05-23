@@ -1,0 +1,31 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+  pre_build:
+    commands:
+    - echo Logging in to Amazon ECR...
+    - aws --version
+    - $(aws ecr get-login --region us-east-1 --no-include-email)
+    
+  build:
+    commands:
+    - echo Build started on `date`
+    - echo Building Java
+    - cd Authorization-Microservice
+    - mvn compile
+    - mvn package -DskipTests
+    - echo Building the docker image..
+    - docker build -t pms-auth-rep ..
+    - docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest
+  post_build:
+    commands:
+    - echo Build completed on `date`
+    - echo Pushing docker image
+    - docker push 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest
+    - echo Writting definition file
+    - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest > imagedefinitions.json
+artifacts:
+  files:
+  - Authorization-Microservice/imagedefinitions.json
