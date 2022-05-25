@@ -24,7 +24,7 @@ phases:
     - echo Pushing docker image
     - docker push 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first
     - echo Writting definition file
-    - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first> imagedefinitions.json
+    - printf '[{"name":"%s","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first> imagedefinitions.json
 artifacts:
   files:
   - Authorization-Microservice/imagedefinitions.json
