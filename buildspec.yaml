@@ -28,4 +28,4 @@ commands:
 - printf '[{"name":"%s","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest> imagedefinitions.json
 artifacts:
 files:
-- Authorization-Microservice/imagedefinitions.jso
+- Authorization-Microservice/imagedefinitions.json
