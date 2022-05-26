@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11
+	  java: corretto11
   pre_build:
     commands:
     - echo Logging in to Amazon ECR...
@@ -15,7 +15,7 @@ phases:
     - echo Build started on `date`
     - echo $IMAGE_URI
     - mvn clean package -Ddockerfile.skip
-    - docker build --tag $IMAGE_URI
+    - docker build --tag $IMAGE_URI .
   post_build:
     commands:
     - printenv
@@ -29,4 +29,3 @@ phases:
 artifacts:
   files:
   - imagedefinitions.json
-
