@@ -7,9 +7,9 @@ pre_build:
 commands:
 - echo Logging in to Amazon ECR...
 - aws --version
-- aws ecr get-login-password --region <us-east-1> | docker login --username AWS --password-stdin <156962844638>.dkr.ecr.<us-east-1>.amazonaws.com
+- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 156962844638.dkr.ecr. us-east-1.amazonaws.com
 - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-- IMAGE_URI=<156962844638.dkr.ecr.us-east-1.amazonaws.com/fse-pms-auth-repo>:${TAG}
+- IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/fse-pms-auth-repo:${TAG}
 build:
 commands:
 - echo Build started on `date`
@@ -24,7 +24,7 @@ commands:
 - echo Pushing docker image
 - docker push $IMAGE_URI
 - echo push completed
-- printf '[{"name":"%s","imageUri":"%s"}]' <container name> $IMAGE_URI > imagedefinitions.json
+- printf '[{"name":"%s","imageUri":"%s"}]' fse-auth-container $IMAGE_URI > imagedefinitions.json
 artifacts:
 files:
 - imagedefinitions.json
