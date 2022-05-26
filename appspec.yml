@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+- TargetService:
+Type: AWS::ECS::Service
+Properties:
+TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/fse-pms-890536-auth-TD:1"
+LoadBalancerInfo:
+ContainerName: "fse-auth-container"
+ContainerPort: 8000
+PlatformVersion: "LATEST"
