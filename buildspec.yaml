@@ -9,7 +9,7 @@ phases:
     - aws --version
     - echo Spece@sp123 | docker login --username leos12 --password-stdin
     - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-    - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/fse-pms-auth-repo:${TAG}
+    - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-890536-auth-rep:${TAG}
   build:
     commands:
     - echo Build started on `date`
