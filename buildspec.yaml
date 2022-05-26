@@ -18,14 +18,14 @@ commands:
 - echo Building Java
 - mvn clean
 - echo Building the docker image..
-- docker tag pms-auth-rep:first 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first
+- docker tag pms-auth-rep:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest
 post_build:
 commands:
 - echo Build completed on `date`
 - echo Pushing docker image
 - docker push $IMAGE_URI
 - echo Writting definition file
-- printf '[{"name":"%s","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:first> imagedefinitions.json
+- printf '[{"name":"%s","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-rep:latest> imagedefinitions.json
 artifacts:
 files:
 - Authorization-Microservice/imagedefinitions.jso
