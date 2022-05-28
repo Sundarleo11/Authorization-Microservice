@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	
-/*
+
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		 //httpSecurity.csrf().disable();
@@ -64,9 +64,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 
 		httpSecurity.headers().frameOptions().disable();
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-	}*/
+	}
 	
-	@Override
+/*	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable().authorizeRequests().antMatchers("/authenticate", "/authorize", "/**")
 				.permitAll().anyRequest().authenticated().and().exceptionHandling()
@@ -75,6 +75,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 
 
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-	}
+	}*/
 	
 }
